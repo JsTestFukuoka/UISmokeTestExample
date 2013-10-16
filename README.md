@@ -1,29 +1,20 @@
- BaseCMSのデモサイトをスモークテストしてみる
-=============================================
+ BaseCMSのデモサイトをスモークテストしてみるサンプル
+=====================================================
 
 
  # 構成 #
 --------------
 
-mocha + wd-sync + chromedriver + androiddriver
-
-
-GalaxyNexus
-	OS: Android 4.2.2(Jelly Bean)
-	IP: 10.0.2.19
-
-追加
-	jenkins
-	saucelabs
+mocha + wd-sync + (chromedriver or androiddriver)
 
 主にテスト対象となるのは、
 	・簡単なスクリプトのテスト
-		facebookの埋め込み
 		画面の動的変更
-	・レイアウトの崩れ
+	・レイアウトの崩れチェック
 くらいです。
 
 http://demo.basercms.net/#
+
 
  # 計画 #
 ----------
@@ -34,20 +25,13 @@ http://demo.basercms.net/#
 ### Alpha ###
 	ホーム				http://demo.basercms.net/
 	会社案内			http://demo.basercms.net/about
-		※非同期にGoogleMapsが表示されるので、それが表示し終わったから次に進むこと
 	サービス			http://demo.basercms.net/service
 	新着情報			http://demo.basercms.net/news/index
 	お問い合わせ		http://demo.basercms.net/contact/index
-		※お問い合わせフォームには「リセット」と「サブミット」それぞれのボタンもある
 	アイコンの使い方	http://demo.basercms.net/icons
 	サイトマップ		http://demo.basercms.net/sitemap
-
 	リンク				http://basercms.net/
-
 	Webからの問い合わせ	http://demo.basercms.net/contact
-
-	facebookウィジェット
-		※全てが表示されるまで非同期に待つ必要あり
 
 ### Beta ###
 	カンバン５つ
@@ -65,7 +49,7 @@ http://demo.basercms.net/#
 + メイン７画面
 + 表示チェック項目がそれぞれに存在する
 + 試験項目書を作成して、それぞれに「必ず毎回どうしても絶対にチェックしなければならないリスクを抱えている場所」を絞り込む
-+ スマフォ版で閲覧した時は、検索フォームが表示されない（存在しない？）
++ スマフォ版で閲覧した時は、検索フォームが表示されない（存在しない）
 
 
  # 次の課題 #
