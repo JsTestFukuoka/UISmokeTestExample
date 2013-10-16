@@ -22,6 +22,16 @@ elif [ "$1" = "android" ]; then
 	export SELENIUM_BROWSER="android"
 	export SELENIUM_PLATFORM="ANDROID"
 	export SELENIUM_VERSION="4.2"
+elif [ "$1" = "saucelabs" ]; then
+	echo "testing with iPhoneEmulator on SauceLabs"
+	export SELENIUM_HOST="ondemand.saucelabs.com"
+	export SELENIUM_PORT=80
+	export SELENIUM_BROWSER="iphone"
+	export SELENIUM_PLATFORM="Mac 10.8"
+	export SELENIUM_VERSION="6.0"
+	# SAUCE_USER_NAME/SAUCE_API_KEYは必要に応じて修正してください
+	export SAUCE_USER_NAME="kuronekomichael"
+	export SAUCE_API_KEY="i4otkjf3-389r-8373-flk2-t8ioejkakgja"
 else
 	echo -e "error: invalid driver-name\nusage\n\t$ ./do-test.sh chrome\n\t$ ./do-test.sh android"
 	exit 1
