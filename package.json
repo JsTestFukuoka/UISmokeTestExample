@@ -1,0 +1,23 @@
+{
+  "name": "SmokeTestingExample",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "selenium",
+    "webdriver",
+    "test",
+    "fibers",
+    "sync"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kuronekomichael",
+  "license": "MIT",
+  "devDependencies": {
+    "selenium-factory": "0.0.1",
+    "mkdirp": "~0.3.5",
+    "date-tokens": "0.0.2"
+  }
+}
