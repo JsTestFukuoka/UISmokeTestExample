@@ -7,6 +7,13 @@ if [ "$1" = "chrome" ]; then
 	export SELENIUM_BROWSER="chrome"
 	export SELENIUM_PLATFORM="MAC"
 	export SELENIUM_VERSION="10.7"
+elif [ "$1" = "firefox" ]; then
+	echo "testing with FireFoxDriver"
+	export SELENIUM_HOST="localhost"
+	export SELENIUM_PORT=4445
+	export SELENIUM_BROWSER="firefox"
+	export SELENIUM_PLATFORM="MAC"
+	export SELENIUM_VERSION="10.8"
 elif [ "$1" = "android" ]; then
 	echo "testing with AndroidDriver"
 	export SELENIUM_HOST="192.168.2.2"
